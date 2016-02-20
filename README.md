@@ -1,7 +1,6 @@
 ## Sensu-Plugins-feature-requests
 
 [![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-feature-requests.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-feature-requests)
-[![Gem Version](https://badge.fury.io/rb/sensu-plugins-feature-requests.svg)](http://badge.fury.io/rb/sensu-plugins-feature-requests)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-feature-requests.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-feature-requests)
