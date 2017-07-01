@@ -1,55 +1,38 @@
-## Sensu-Plugins-feature-requests
+## Sensu Plugins Feature Requests
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-feature-requests.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-feature-requests)
-[![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests)
-[![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-feature-requests)
-[![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-feature-requests.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-feature-requests)
+Your place to contribute to Sensu plugins and their maintainers.
 
-## Functionality
+## Background
 
-## Files
- *
- *
- *
- *
+Sensu plugins can be found [all over GitHub](https://github.com/search?utf8=%E2%9C%93&q=sensu-plugin&type=). Community maintainers of Sensu collect them, code review and manage their releases under the [Sensu Plugins organization](https://github.com/sensu-plugins). This results in [the many gems](https://rubygems.org/search?utf8=%E2%9C%93&query=sensu-plugin) we all rely on.
 
-## Usage
+## How to Use This Repo
 
-## Installation
+Please [open Issues](https://github.com/sensu-plugins/sensu-plugins-feature-requests/issues) for anything on your mind that will help the community succeed at having **the best collection of monitoring plugins.**
 
-Add the public key (if you haven’t already) as a trusted certificate
+Common requests are:
 
-```
-gem cert --add <(curl -Ls https://raw.githubusercontent.com/sensu-plugins/sensu-plugins.github.io/master/certs/sensu-plugins.pem)
-gem install sensu-plugins-feature-requests -P MediumSecurity
-```
+* Transfer ownership of your rad Sensu plugin to this organization ([example][1])
+* Offer an awesome idea that will help others make great plugins ([example][3])
 
-You can also download the key from /certs/ within each repository.
+## How You Can Help
 
-#### Rubygems
+The success of Sensu depends on its contributors. You can always help the maintainers by:
 
-`gem install sensu-plugins-feature-requests`
+* [Reviewing open PRs][4] (especially if you're familiar with problem it solves)
+* Helping review and comment on [open Issues][5] (especially older ones)
+* Opening PRs that resolve [open Issues][5]
+* Volunteer as a maintainer (but only after you've done :point_up: a bunch first)
 
-#### Bundler
+And **thank you** for your contribution. It adds to the monitoring :heart:.
 
-Add *sensu-plugins-sensu-plugins-feature-requests* to your Gemfile and run `bundle install` or `bundle update`
+## Other Resources
 
-#### Chef
+If you're working on building your own plugins, use [the skeleton plugin](https://github.com/sensu-plugins/sensu-plugins-skel) to get started!
 
-Using the Sensu **sensu_gem** LWRP
-```
-sensu_gem 'sensu-plugins-feature-requests' do
-  options('--prerelease')
-  version '0.0.1'
-end
-```
 
-Using the Chef **gem_package** resource
-```
-gem_package 'sensu-plugins-feature-requests' do
-  options('--prerelease')
-  version '0.0.1'
-end
-```
-
-## Notes
+[1]: https://github.com/sensu-plugins/sensu-plugins-feature-requests/issues/23
+[2]: https://github.com/sensu-plugins/sensu-plugins-feature-requests/issues/17
+[3]: https://github.com/sensu-plugins/sensu-plugins-feature-requests/issues/19
+[4]: https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+user%3Asensu-plugins
+[5]: https://github.com/issues?q=is%3Aopen+is%3Aissue+user%3Asensu-plugins+sort%3Acomments-desc
