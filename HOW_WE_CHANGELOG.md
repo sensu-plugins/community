@@ -1,54 +1,90 @@
-### What is a CHANGELOG?
+* [What is a CHANGELOG?](#what-is-a-changelog)
+* [Where is the CHANGELOG?](#where-is-the-changelog)
+* [How we CHANGELOG](#how-we-changelog)
+   * [The anatomy of a good CHANGELOG](#the-anatomy-of-a-good-changelog)
+      * [Version Scheme](#version-scheme)
+      * [CHANGELOG Format](#changelog-format)
+      * [Unreleased Change](#unreleased-change)
+      * [The Breaking Change](#the-breaking-change)
+      * [The Version Diffs (for Maintainers)](#the-version-diffs-for-maintainers)
+   * [Example scenarios](#example-scenarios)
+      * [Adding a new feature](#adding-a-new-feature)
+      * [Fixing a Bug](#fixing-a-bug)
+      * [Non-Breaking Changes](#non-breaking-changes)
+      * [Breaking Changes](#breaking-changes)
 
-A CHANGELOG is simple way for users to look at to know what has changed. While there are many philosophies on what a good CHANGELOG should look like. We have decided how this should be presented based on our target audiences which are sysadmins, system engineers, app developers, etc. The one thing they all have in common is that they want to evaluate when and how to upgrade. Because of this we decided to focus on this.
+<!-- Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc) -->
 
-### Where is the CHANGELOG?
+## What is a CHANGELOG?
 
-We should have a `CHANGELOG.md` file in the root of each repository.
+A CHANGELOG is simple way for users quickly identify what has changed between two versions of a project. There are many philosophies on what a good CHANGELOG should look like. Our community has decided to focus on the user, who are most often sysadmins, system engineers, app developers, etc. The important common denominator of our users is that they must evaluate software before an upgrade to ensure stability. Because of this observation, we decided to take the CHANGELOG as an important point in all repositories.
 
-### How we CHANGELOG
+## Where is the CHANGELOG?
 
-For the most part we are very much inline with [Keep A Changelog](http://keepachangelog.com/) but as noted before we wanted to docus on making it easy to evaluate upgrade needs we found it got us 99% of the way there but there was something missing. After getting feedback from users that even though we bumped the major version they still felt it was not clear what was needed to proceed. Thus we decided to add an additional flavor change in the form of a header called `### Breaking Changes`. This allowed it to be more loud and clear when reading the CHANGELOG when you really need to pay attention. We also try to encourage giving enough information that allows the user to understand the upgrade steps required such as you need to install system package x.
+A `CHANGELOG.md` file in expected at the root of every repository.
 
-#### The anatomy of a good CHANGELOG
+## How we CHANGELOG
 
-##### Version Scheme
+We align with [Keep A Changelog](http://keepachangelog.com/) with a few exceptions. Our primary focus is ease of evaluate before choosing to upgrade. Sensu user feedback found that bumps in the major version alone are not sufficient to make the call. Thus we decided to add an additional flavor change in the form of a header called `### Breaking Changes`. This emphasis on potential risk allows helps all users make the right call. We also encourage giving enough information that any user can understand the upgrade steps required to adapt to any breaking changes.
 
-It should detail how things are versioned by maintainers:
+### The anatomy of a good CHANGELOG
+
+These are the essential features to a CHANGELOG.
+Start by reading through [Keep A Changelog](http://keepachangelog.com/) to familiarize yourself with a majority our practices. See [a live example here](https://github.com/sensu-plugins/sensu-plugins-sensu/blob/master/CHANGELOG.md) for the TL;DR version.
+
+#### Version Scheme
+
+Clearly state how the repository is versioned by maintainers:
+
 ```
 This project adheres to [Semantic Versioning](http://semver.org/)
 ```
 
-One thing to note is that when proposing a new change (via pull request) you should always put your changes under:
+#### CHANGELOG Format
+
+Give information on CHANGELOG format. By default:
+
+```
+This CHANGELOG follows the format listed at [Our CHANGELOG Guidelines ](https://github.com/sensu-plugins/community/blob/master/HOW_WE_CHANGELOG.md).
+Which is based on [Keep A Changelog](http://keepachangelog.com/)
+```
+
+#### Unreleased Change
+
+Part of the maintainer workflow for Sensu plugins is to propose a new change (via Pull Request) under a header that reflects the code has not yet been released:
+
 ```
 ## [Unreleased]
 ### TYPE_OF_CHANGE
 - thing changed
 ```
 
-The reason for this is that there is no guarantee as to when a maintainer will review it, when it will be merged, or when it will be released.
+This convention helps since there is no guarantee as to when a maintainer will review it, when it will be merged, or when it will be released.
 
-##### CHANGELOG Format
-Give information on CHANGELOG format.
-```
-This CHANGELOG follows the format listed at [Our CHANGELOG Guidelines ](https://github.com/sensu-plugins/community/blob/master/HOW_WE_CHANGELOG.md).
-Which is based on [Keep A Changelog](http://keepachangelog.com/)
-```
+#### The Breaking Change
 
-##### Keep A CHANGELOG
-Read through [Keep A Changelog](http://keepachangelog.com/) as they have some great stuff and this is just a few flavor and process changes.
+While avoidance of breaking changes is preferred, there will always be times where improvement requires incompatibility with previous versions. These moments are most appreciated when they greatly improve the user experience and also includes reasonable upgrade path. In these cases, per [SemVer](http://semver.org/), we bump to a major version.
 
-##### The Breaking Change
-While usually a breaking change is avoided where possible there will always be times where it either has no path forward or greatly improves the user experience and has a reasonable upgrade path. In these cases per [Semver](http://semver.org/) we bump to a major version. In some cases you can remove things that are not a breaking change. For example removing test code is not a breaking change but bumping the required version of a major dependency (if using semver) or any breaking change with another versioning scheme. In these breaking changes we should think about what the end user needs to do other than simply install the new version. This can include steps like:
-- you need to install some new system library
-- a parameter for a unit of code is removed in a way that requires human intervention.
+Some helpful considerations:
 
-##### The version Diffs
-We talked about how the focus was on human readable changelogs to be easily evaluated for upgrades but we still might need to look at the whole change especially if you are triaging a recently introduced bug or found a saw a new feature and wanted to know how it worked more.
+* Removal of functionality is more often than not a breaking change (one exception would be removal of test code)
+* Bumping the required version of a significant dependency (if also using semver)
+* Breaking change within dependencies that may not follow semver is also considered breaking in these projects
 
-The following should only be done by a maintainer but basically will give the version released with a diff link and a date as outlined per the convention of [Keep A Changelog](http://keepachangelog.com).
+In these breaking changes we should think about what the end user needs to do other than install the new version. This can include steps like:
 
-Example:
+* Installation of new system library
+* Changes to environmental variables or directory paths
+* A parameter for a unit of code is removed
+
+Or any other changes that will require human intervention.
+
+#### The Version Diffs (for Maintainers)
+
+**Concern for Maintainers only**
+
+We talked about how the focus was on human-readable changelogs for easy evaluation for upgrades. We still might need to look at the whole change between versions, especially if you are triaging a recently introduced bug or found an undocumented feature and wanted to know more of how it works. A maintainer can provide the version released with a diff link and a date as outlined per the convention of [Keep A Changelog](http://keepachangelog.com). For example:
+
 ```
 ## [Unreleased]
 
@@ -70,12 +106,14 @@ TRUNCATED OUTPUT
 [8.0.0]: https://github.com/sensu-plugins/sensu-plugins-aws/compare/7.1.0...8.0.0
 ```
 
+### Example scenarios
 
-
-### Just give me some examples
+Here are some common situations that warrant updates to the `CHANGLOG.md` file.
 
 #### Adding a new feature
-This can be a new script, library, etc or a new feature within existing code.
+
+A new script, library or feature added:
+
 ```
 ## [Unreleased]
 ### Added
@@ -84,16 +122,20 @@ This can be a new script, library, etc or a new feature within existing code.
 - added testing for `check-something-shiny.rb` (@mygithubuser)
 ```
 
-#### Changing an existing feature
-##### Fixing a bug
-This can be a breaking change that does not need to be specifically called out or versioned as a major if it only affects broken functionality.
+#### Fixing a Bug
+
+Note that this can be a breaking change that does not need to be specifically called out or versioned as a major if it only affects broken functionality:
+
 ```
 ## [Unreleased]
 ### Fix
 - `check-something-shiny.rb`: fixed a bug that when it was too shiny it hurt your eyes. (@mygithubuser)
 ```
-##### Non Breaking
-This can either be functional or styalistic changes and are not limited to code.
+
+#### Non-Breaking Changes
+
+This can either be functional or stylistic changes (not limited to code):
+
 ```
 ## [Unreleased]
 ### Changed
@@ -101,8 +143,10 @@ This can either be functional or styalistic changes and are not limited to code.
 - to a new version of rubocop and appeased the new cops. (@mygithubuser)
 ```
 
-##### Breaking Changes
-Please read [The Breaking Change](#the-breaking-change).
+#### Breaking Changes
+
+These are the ones that change behavior as mentioned above. Please read [The Breaking Change](#the-breaking-change). Example:
+
 ```
 ## [Unreleased]
 ### Breaking Change
