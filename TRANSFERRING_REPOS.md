@@ -15,4 +15,5 @@ Basically this will outline the basic process to transfer a repo over to be comm
    - rubygems setup
    - badges
    - cleanup
+1. If there was a gem previously pushed to rubygems.org then we need to become an owner so we can can do deploys. The command should look like this: `gem owner sensu-plugins-systemd -a sensu-plugin@sensu-plugins.io`
 1. Once everything is setup the issue should be closed and any concerns like adding additional documentation, testing, etc should create issues in the respective repo.
