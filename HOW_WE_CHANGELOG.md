@@ -45,7 +45,7 @@ This project adheres to [Semantic Versioning](http://semver.org/)
 Give information on CHANGELOG format. By default:
 
 ```
-This CHANGELOG follows the format listed at [Our CHANGELOG Guidelines](https://github.com/sensu-plugins/community/blob/master/HOW_WE_CHANGELOG.md).
+This CHANGELOG follows the format listed [here](https://github.com/sensu-plugins/community/blob/master/HOW_WE_CHANGELOG.md).
 Which is based on [Keep A Changelog](http://keepachangelog.com/)
 ```
 
