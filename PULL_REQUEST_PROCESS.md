@@ -156,6 +156,7 @@ Minimum Requirements:
 - why you want it?
 - what are the impacts to the best of your knowledge?
 - proposed solution (if missing the PR titled with `[Feature REQUEST]`, `[QUESTION]`, etc)
+- in some cases such as `sensu-plugins-http` and `sensu-plugins-ssl` there is overlap, in these scenerios you should include why this is the right place to put the new feature
 
 Preferred Requirements:
 - all of the min requirements
