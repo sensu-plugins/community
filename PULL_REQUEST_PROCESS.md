@@ -20,14 +20,16 @@ This doc explains the process and best practices for submitting a PR to [Sensu P
 - [Why is my PR not getting reviewed?](#why-is-my-pr-not-getting-reviewed)
 - [Best Practices for Faster Reviews](#best-practices-for-faster-reviews)
   * [0. Familiarize yourself with project conventions](#0-familiarize-yourself-with-project-conventions)
-  * [1. Is the feature wanted? Are there many ways forward?](#1-is-the-feature-wanted-are-there-many-ways-forward)
-  * [2. Smaller Is Better: Small Commits, Small PRs](#2-smaller-is-better--small-commits--small-prs)
-  * [3. Open a Different PR for Fixes and Generic Features](#3-open-a-different-pr-for-fixes-and-generic-features)
-  * [4. Comments matter](#4-comments-matter)
-  * [5. Test](#5-test)
-  * [6. Squashing and Commit Titles](#6-squashing-and-commit-titles)
-  * [7. KISS, YAGNI, MVP, etc.](#7-kiss--yagni--mvp--etc)
-  * [8. It's OK to Push Back](#8-it-s-ok-to-push-back)
+  * [1. Is there an open issue for this bug/feature?](#1-is-there-an open-issue-for-this-bug-or-feature)
+  * [2. Is there an existing PR for this bug or feature?](#1-is-there-an-existing-pr-for-this-bug-or-feature)
+  * [3. Is the feature wanted? Are there many ways forward?](#1-is-the-feature-wanted-are-there-many-ways-forward)
+  * [4. Smaller Is Better: Small Commits, Small PRs](#2-smaller-is-better--small-commits--small-prs)
+  * [5. Open a Different PR for Fixes and Generic Features](#3-open-a-different-pr-for-fixes-and-generic-features)
+  * [6. Comments matter](#4-comments-matter)
+  * [7. Testing artifacts](#5-testing-artifacts)
+  * [8. Squashing and Commit Titles](#6-squashing-and-commit-titles)
+  * [9. KISS, YAGNI, MVP, etc.](#7-kiss--yagni--mvp--etc)
+  * [10. It's OK to Push Back](#8-it-s-ok-to-push-back)
   * [Common Sense and Courtesy](#common-sense-and-courtesy)
 
 # Before You Submit a PR
@@ -145,7 +147,15 @@ Let's talk about best practices so your PR gets reviewed quickly.
 * [Developer Guidelines](https://github.com/sensu-plugins/documentation/blob/master/docs/developer_guidelines.md)
 * [CHANGELOG Guidelines](https://github.com/sensu-plugins/community/blob/master/HOW_WE_CHANGELOG.md)
 
-## 1. Is the feature wanted? Are there many ways forward?
+## 1. Is there an open issue for this bug or feature?
+
+If so link to it in the PR (e.g. Fixes #NN) in the body of the PR so the issue is linked and updated.
+
+## 2. Is there an existing PR for this bug or feature?
+
+Is there an existing PR for this bug/feature? Check the open PRs before submitting a duplicate.
+
+## 3. Is the feature wanted? Are there many ways forward?
 
 Are you sure Feature-X is something the Sensu plugin community wants or will accept? Is it implemented to fit with other changes in flight? Are you willing to bet a few days or weeks of work on it?
 
@@ -171,7 +181,7 @@ Be clear about what type of feedback you are asking for when you submit a propos
 
 Now, if we ask you to change the design, you won't have to re-write it all.
 
-## 2. Smaller Is Better: Small Commits, Small PRs
+## 4. Smaller Is Better: Small Commits, Small PRs
 
 Small commits and small PRs get reviewed faster and are more likely to be correct than big ones.
 
@@ -201,7 +211,7 @@ We want every PR to be useful on its own, so use your best judgment on what shou
 
 As a rule of thumb, if your PR is directly related to Feature-X and nothing else, it should probably be part of the Feature-X PR. If you can explain why you are doing seemingly no-op work ("it makes the Feature-X change easier, I promise") we'll probably be OK with it. If you can imagine someone finding value independently of Feature-X, try it as a PR. (Do not link pull requests by `#` in a commit description, because GitHub creates lots of spam. Instead, reference other PRs via the PR your commit is in.)
 
-## 3. Open a Different PR for Fixes and Generic Features
+## 5. Open a Different PR for Fixes and Generic Features
 
 **Put changes that are unrelated to your feature into a different PR.**
 
@@ -216,7 +226,7 @@ For example, if you find yourself touching a lot of checks, think about using sh
 Likewise, if Feature-X is similar in form to Feature-W which was checked in last month, and you're duplicating some tricky stuff from Feature-W, consider prefactoring the core logic out and using it in both Feature-W and
 Feature-X. (Do that in its own commit or PR, please.)
 
-## 4. Comments Matter
+## 6. Comments Matter
 
 In your code, if someone might not understand why you did something (or you won't remember why later), comment it. Many code-review comments are about this exact issue.
 
@@ -224,13 +234,17 @@ If you think there's something pretty obvious that we could follow up on, add a 
 
 Read up on [Rubocop Style Guide](https://github.com/bbatsov/ruby-style-guide#comments) - follow those *general* rules for comments. If you disagree with the style guide just explain why, we're pretty reasonable people. Mostly.
 
-## 5. Test
+## 7. Testing artifacts
 
 ### Today
 
 Tests are very much lacking, please feel free to check [This github issue](https://github.com/sensu-plugins/community/issues/41) for how you can help us change this.
 
 If you are not willing to write an automated test then you should either in the PR stream add the redacted IO to the comment stream or description, if it is quite large please create a [gist](https://gist.github.com/) and link to it.
+
+#### Bugs
+
+For bugs you should include the before and after input and output in comments or gists.
 
 #### Examples
 
@@ -260,13 +274,39 @@ CheckALBTargetGroupHealth OK: All ALB target groups are healthy
 
 Here is a gist showing two runs, the second one using the new -s option. Let me know if you would like more than [this](https://gist.github.com/ivanfetch/430af66a78f4fcb9a168b8ece985d618)
 
+##### Bugs
+
+As mentioned bugs should include before and after output.
+
+###### Comment
+
+Before:
+```
+$ ./check-alb-target-group-health.rb -r us-west-2
+ExceptionBlagh
+```
+
+After:
+```
+$ ./check-alb-target-group-health.rb -r us-west-2
+CheckALBTargetGroupHealth OK: All ALB target groups are healthy
+```
+
+Here is a real one: https://github.com/sensu-plugins/sensu-plugins-ssl/pull/28#issue-232465754
+
+###### Gists
+
+Before: https://gist.github.tld/user/somegist (find a real example and come back later to update)
+
+After: https://gist.github.com/rwky/e5eabfa4ae1e7713c0503498cdc37dca
+
 ### Future
 
 Nothing is more frustrating than starting a review, only to find that the tests are inadequate or absent. Very few PRs can touch code and NOT touch tests.
 
 If you don't know how to test Feature-X, please ask!  We'll be happy to help you design things for easy testing or to suggest appropriate test cases.
 
-## 6. Squashing and Commit Titles
+## 8. Squashing and Commit Titles
 
 Your reviewer has finally sent you feedback on Feature-X.
 
@@ -296,11 +336,11 @@ Each commit should have a good title line (<80 characters) and include an additi
 
 A commit, as much as possible, should be a single logical change.
 
-## 7. KISS, YAGNI, MVP, etc.
+## 9. KISS, YAGNI, MVP, etc.
 
 Sometimes we need to remind each other of core tenets of software design - Keep It Simple, You Aren't Gonna Need It, Minimum Viable Product, and so on. Adding a feature "because we might need it later" is antithetical to software that ships. Add the things you need NOW and (ideally) leave room for things you might need later - but don't implement them now.
 
-## 8. It's OK to Push Back
+## 10. It's OK to Push Back
 
 Sometimes reviewers make mistakes and can disagree. It's OK to push back on changes your reviewer requested. If you have a good reason for doing something a certain way, you are absolutely allowed to debate the merits of a requested change. Both the reviewer and submitter should strive to discuss these issues in a polite and respectful manner.
 
