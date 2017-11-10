@@ -4,7 +4,7 @@ Thanks for joining our Community Slack! This page will walk you through our appr
 
 ## Who We Are
 
-The Sensu Community is a mix of open source open source users, developers, enterprise customers and monitoring enthusiasts. We encourage all members to participate in the collective learning happening everyday.
+The Sensu Community is a mix of open source users, developers, enterprise customers and monitoring enthusiasts. We encourage all members to participate in the collective learning happening everyday.
 
 ## Register for Slack
 
@@ -48,7 +48,7 @@ There will be times when questions are asked and do not receive an answer. Feel 
 ### Setup your Profile
 
 Once registered, all members have access to customize their profile [through the Slack
-website](https://chefcommunity.slack.com/account/profile). We appreciate when you add a distinct avatar and other details about themselves so others can get to know you.
+website](https://sensucommunity.slack.com/account/profile). We appreciate when you add a distinct avatar and other details about themselves so others can get to know you.
 
 ### Sharing Policies
 
