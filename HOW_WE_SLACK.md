@@ -6,6 +6,10 @@ Thanks for joining our Community Slack! This page will walk you through our appr
 
 The Sensu Community is a mix of open source users, developers, enterprise customers and monitoring enthusiasts. We encourage all members to participate in the collective learning happening everyday.
 
+## Why We're here
+
+Maintainers of Sensu made this Slack channel for the community to have a friendly place for real-time peer support, collaboration and fun.
+
 ## Register for Slack
 
 To register for our Slack team, enter your email into the landing page at [slack.sensu.io](http://slack.sensu.io).
@@ -23,15 +27,19 @@ We have a somewhat unique approach to channels that we hope you enjoy. Here are 
 | **#contributing**   | Dedicated place to offer or discussion contribution to the Sensu project |
 | **#help**           | A breakout channel for detailed troubleshooting                          |
 
-We also break out into speciality channels. As an example, you might start a conversation in one of the project-focused channels, like `#plugins`, `#extensions` or `#core`, and then hop into `#help` to dive deeper. You might open a PR to fix a known issue and mention it in `#contributing`. You will also see channels for each major configuration management tool (like `#cm-puppet`, `#cm-chef`, and so on). Additional channels are welcome as needed.
+We also break out into speciality channels. As an example, you might start a conversation in one of the project-focused channels, like `#plugins`, `#extensions` or `#core`, and then hop into `#help` to dive deeper. You might open a PR to fix a known issue and mention it in `#contributing`. You will also see channels for each major configuration management tool (like `#puppet`, `#chef`, and so on). Additional channels are welcome as needed.
 
 ## Administration
 
-This Slack organization is maintained by the community team of Sensu Inc with help from maintainers. The list of all maintainers [is available here](README.md). You can reach all of us simply by typing `@maintainers` in any channel of Slack. If you want to privately contact an administrator, please email `community@sensu.io`.
+This Slack organization is maintained by the community team of Sensu Inc with help from maintainers. The list of all maintainers [is available here](README.md). You can reach all of us in #monitoringlove by asking for maintainers. If you want to privately contact an administrator, please email `community@sensu.io`.
+
+### When Moderation Happens
+
+In the rare occasions when [our Code of Conduct](https://sensuapp.org/conduct) is not followed, administrators of Slack have permission to delete content. Maintainers are required to review the incident with the rest of the project leads as well as to notify those who have had their content deleted.
 
 ## Slack-tiquette
 
-Here are a few tips to make your time on Slack fun and productive. When in doubt, refer to [our Code of Conduct](https://sensuapp.org/conduct). Feel free to ask questions in the `#monitoringlove` channel as well.
+Here are a few tips to make your time on Slack fun and productive. When in doubt, refer to [our Code of Conduct](https://sensuapp.org/conduct). It's really clear on acceptable communication and expectations. Feel free to ask questions in the `#monitoringlove` channel at any time as well.
 
 ### Non-SLA on Questions
 
