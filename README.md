@@ -19,12 +19,58 @@ Common requests are:
 
 The success of Sensu depends on its contributors. You can always help the maintainers by:
 
-* [Reviewing open PRs][4] (especially if you're familiar with problem it solves)
-* Helping review and comment on [open Issues][5] (especially older ones)
+* [Reviewing open PRs][4] (especially if you're familiar with technology involved)
+* Reviewing and commenting on [open Issues][5] (especially older ones)
 * Opening PRs that resolve [open Issues][5]
-* Volunteer as a maintainer (but only after you've done :point_up: a bunch first)
+* Volunteer as a maintainer (after you've done these :point_up: for some time)
 
 And **thank you** for your contribution. It adds to the monitoring :heart:.
+
+## Maintained Areas
+
+Maintainers do their best to cover the diverse set of plugins and adjacent technologies that make using Sensu a joy.
+
+| Area                         | Major Links                                                  | Maintainers                                                                                                                                        | Needs Contributors?                                                                              |
+|:-----------------------------|:-------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| ![Sensu Org][sensu_pic]      | [Plugins Org][plug_org]</br>[Extensions Org][ext_org]        | **[Matt (@mbbroberg - Lead)][11]**</br>[Ben (@majormoses)][9]</br>[Eric (@eheydrick)][10]</br>[Luis (@luisdavim)][12]</br>[Shane (@sstarcher)][13] | **Yes!** [Read about how!][volunteer]                                                            |
+| ![Ruby Plugin][ruby_pic]     | [Ruby Plugin Library][ruby_lib]                              | **[Cameron (@cwjohnston - Lead)][17]**</br>[Eric (@eheydrick)][10]</br>[Ben (@majormoses)][9]                                                      | **Yes!** Please [claim an open issue!](https://github.com/sensu-plugins/sensu-plugin/issues)     |
+| ![Python Plugin][python_pic] | [Python Plugin Library][py_lib]                              | **[Barry (@barryorourke - Lead)][14]**</br>[Ben (@majormoses)][9]                                                                                  | **Yes!** [Help wanted on testing 🙏][py_helpwanted]                                              |
+| ![Windows][windows_pic]      | [Windows Plugins][windows]                                   |                                                                                                                                                    | **Yes!** [We're looking for a maintainer!](https://github.com/sensu-plugins/community/issues/74) |
+| ![Puppet][puppet_pic]        | [Puppet Module][puppet]                                      | **[Garrett (@ghoneycutt - Lead)](https://github.com/ghoneycutt)**                                                                                  | We have dedicated maintainers right now!                                                         |
+| ![Chef][chef_pic]            | [Chef Cookbook][chef]                                        | **[Ben (@majormoses - Lead)][9]**                                                                                                                  | **Yes!** Please [volunteer to help out.](https://github.com/sensu-plugins/community/issues/75)   |
+| ![SaltStack][salt_pic]       | [SaltStack Formula][saltstack]                               |                                                                                                                                                    | We're discussing that right now. Stay tuned!                                                     |
+| ![Ansible][ansible_pic]      | [Ansible Playbook][ansible]</br>[Ansible Module][ans_module] |                                                                                                                                                    | We're discussing that right now. Stay tuned!                                                     |
+
+[sensu_pic]: https://avatars0.githubusercontent.com/u/10713628?s=50
+[ruby_pic]: https://avatars2.githubusercontent.com/u/210414?s=50
+[python_pic]: https://avatars0.githubusercontent.com/u/1525981?s=50
+[windows_pic]: https://user-images.githubusercontent.com/1744971/32962538-aff30f08-cb81-11e7-86c2-b8aa226d211d.png
+[puppet_pic]: https://avatars1.githubusercontent.com/u/9100?s=50
+[chef_pic]: https://avatars3.githubusercontent.com/u/29740?s=50
+[salt_pic]: https://avatars2.githubusercontent.com/u/1147473?s=50
+[ansible_pic]: https://avatars1.githubusercontent.com/u/1507452?s=50
+[plug_org]: https://github.com/sensu-plugins
+[ext_org]: https://github.com/sensu-extensions
+[ruby_lib]: https://github.com/sensu-plugins/sensu-plugin
+[py_lib]: https://github.com/sensu-plugins/sensu-plugin-python
+[windows]: https://github.com/sensu-plugins/sensu-plugins-windows
+[saltstack]: https://github.com/sensu/sensu-salt
+[puppet]: https://github.com/sensu/sensu-puppet
+[chef]: https://github.com/sensu/sensu-chef
+[ansible]: https://github.com/sensu/sensu-ansible
+[ans_module]: https://github.com/ansible/ansible/tree/devel/lib/ansible/modules/monitoring
+[volunteer]: https://github.com/sensu-plugins/community/blob/master/CONTRIBUTING.md
+[py_helpwanted]: https://github.com/sensu-plugins/sensu-plugin-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Help+Wanted%22
+[11]: https://github.com/sstarcher
+[9]: https://github.com/majormoses
+[10]: https://github.com/eheydrick
+[12]: https://github.com/luisdavim
+[13]: https://github.com/sstarcher
+[15]: https://github.com/mattyjones
+[14]: https://github.com/barryorourke
+[16]: https://github.com/calebhailey
+[17]: https://github.com/cwjohnston
+
 
 ## Other Resources
 
