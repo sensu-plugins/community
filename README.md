@@ -24,7 +24,7 @@ The success of Sensu depends on its contributors. You can always help the mainta
 * Opening PRs that resolve [open Issues][5]
 * Volunteer as a maintainer (after you've done these :point_up: for some time)
 
-And **thank you** for your contribution. It adds to the monitoring :heart:.
+And **thank you** for your contribution. It adds to the monitoring love :heart:.
 
 ## Maintained Areas
 
@@ -37,9 +37,9 @@ Maintainers do their best to cover the diverse set of plugins and adjacent techn
 | ![Python Plugin][python_pic] | [Python Plugin Library][py_lib]                              | **[Barry (@barryorourke - Lead)][14]**</br>[Ben (@majormoses)][9]                                                                                  | **Yes!** [Help wanted on testing 🙏][py_helpwanted]                                              |
 | ![Windows][windows_pic]      | [Windows Plugins][windows]                                   |                                                                                                                                                    | **Yes!** [We're looking for a maintainer!](https://github.com/sensu-plugins/community/issues/74) |
 | ![Puppet][puppet_pic]        | [Puppet Module][puppet]                                      | **[Garrett (@ghoneycutt - Lead)](https://github.com/ghoneycutt)**                                                                                  | We have dedicated maintainers right now!                                                         |
-| ![Chef][chef_pic]            | [Chef Cookbook][chef]                                        | **[Ben (@majormoses - Lead)][9]**                                                                                                                  | **Yes!** Please [volunteer to help out.](https://github.com/sensu-plugins/community/issues/75)   |
-| ![SaltStack][salt_pic]       | [SaltStack Formula][saltstack]                               |                                                                                                                                                    | We're discussing that right now. Stay tuned!                                                     |
-| ![Ansible][ansible_pic]      | [Ansible Playbook][ansible]</br>[Ansible Module][ans_module] |                                                                                                                                                    | We're discussing that right now. Stay tuned!                                                     |
+| ![Chef][chef_pic]            | [Chef Cookbook][chef_sensu]</br>[Uchiwa Cookbook][chef_uchiwa]                                        | **[Ben (@majormoses - Lead)][9]**</br>[Tom (@thomasriley)][18]                                                                                                                 | **Yes!** Please [volunteer to help out.](https://github.com/sensu-plugins/community/issues/75)   |
+| ![SaltStack][salt_pic]       | [SaltStack Formula][saltstack]                               |                                                                                                                                                    | **Yes!** Please [volunteer to help out.](https://github.com/sensu-plugins/community/issues/79) |
+| ![Ansible][ansible_pic]      | [Ansible Playbook][ansible]</br>[Ansible Module][ans_module] |                                                                                                                                                    | **Yes!** Please [volunteer to help out.](https://github.com/sensu-plugins/community/issues/80) |
 
 [sensu_pic]: https://avatars0.githubusercontent.com/u/10713628?s=50
 [ruby_pic]: https://avatars2.githubusercontent.com/u/210414?s=50
@@ -56,7 +56,8 @@ Maintainers do their best to cover the diverse set of plugins and adjacent techn
 [windows]: https://github.com/sensu-plugins/sensu-plugins-windows
 [saltstack]: https://github.com/sensu/sensu-salt
 [puppet]: https://github.com/sensu/sensu-puppet
-[chef]: https://github.com/sensu/sensu-chef
+[chef_sensu]: https://github.com/sensu/sensu-chef
+[chef_uchiwa]: https://github.com/sensu/uchiwa-chef
 [ansible]: https://github.com/sensu/sensu-ansible
 [ans_module]: https://github.com/ansible/ansible/tree/devel/lib/ansible/modules/monitoring
 [volunteer]: https://github.com/sensu-plugins/community/blob/master/CONTRIBUTING.md
@@ -70,7 +71,7 @@ Maintainers do their best to cover the diverse set of plugins and adjacent techn
 [14]: https://github.com/barryorourke
 [16]: https://github.com/calebhailey
 [17]: https://github.com/cwjohnston
-
+[18]: https://github.com/thomasriley
 
 ## Other Resources
 
