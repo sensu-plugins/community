@@ -51,7 +51,7 @@ Slack offers two channel-wide broadcast aliases: `@channel` and `@here`. This co
 
 ### Repeat Questions
 
-There will be times when questions are asked and do not receive an answer. Feel free to repeat your question later on when more people are around, or wait for a community member to scrollback and answer it.
+Please post a question in one channel at a time. If you're not sure where, default to `#monitoringlove` to get the most visibility. There will be times when questions are asked and do not receive an answer. Feel free to repeat your question later on when more people are around, or wait for a community member to scrollback and answer it.
 
 ### Setup your Profile
 
