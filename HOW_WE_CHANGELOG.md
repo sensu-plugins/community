@@ -128,7 +128,7 @@ Note that this can be a breaking change that does not need to be specifically ca
 
 ```
 ## [Unreleased]
-### Fix
+### Fixed
 - `check-something-shiny.rb`: fixed a bug that when it was too shiny it hurt your eyes. (@mygithubuser)
 ```
 
@@ -149,7 +149,7 @@ These are the ones that change behavior as mentioned above. Please read [The Bre
 
 ```
 ## [Unreleased]
-### Breaking Change
+### Breaking Changes
 - to allow users who want to only use `metric-something-shiny.rb` which does not require a c compiler but not `check-something-shiny.rb` which would have a dependency on one we removed the `shiny-extended` gem from the gemspec and users will need to refer to the REAMDE on how to install this manually. (@mygithubuser)
 - dropping ruby support for x.y
 - `check-something-shiny.rb`: changed the defaults for `--lighting` from 3 to 5 as this is a better sane default. (@mygithubuser)
