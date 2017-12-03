@@ -12,6 +12,7 @@
       * [Fixing a Bug](#fixing-a-bug)
       * [Non-Breaking Changes](#non-breaking-changes)
       * [Breaking Changes](#breaking-changes)
+      * [Security Updates](#security-updates)
 
 <!-- Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc) -->
 
@@ -153,4 +154,40 @@ These are the ones that change behavior as mentioned above. Please read [The Bre
 - to allow users who want to only use `metric-something-shiny.rb` which does not require a c compiler but not `check-something-shiny.rb` which would have a dependency on one we removed the `shiny-extended` gem from the gemspec and users will need to refer to the REAMDE on how to install this manually. (@mygithubuser)
 - dropping ruby support for x.y
 - `check-something-shiny.rb`: changed the defaults for `--lighting` from 3 to 5 as this is a better sane default. (@mygithubuser)
+```
+
+#### Security Updates
+
+These are not new security features but intended to be used to quickly prioritize installing new security update to patch vulnerable systems. Please see [this](https://github.com/sensu-plugins/community/blob/master/HOW_WE_VERSION.md#security) to understand our stance on versioning these changes so you understand how maintainers will handle it post merge/acceptance.
+
+```
+### Security
+- updated rubocop dependency to `~> 0.51.0` per: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8418. (@mygithubuser)
+```
+
+Another where you can safely deprecate:
+```
+### Security
+- we removed use of `some-gem` gem because it has been not been maintained. We are affected by the following security CVE https://some.hostname.for.a.cve.database.tld/SOME_PATH_TO_CVE (@mygithubuser)
+
+### Deprecated
+- we removed the functionality of `bin/some-check.rb` because of security and maintainability concerns with `some-gem`. We have made sure that `./bin/some-other-check.rb` which does not rely on `some-gem` has feature parity and can be safely updated in your config to reflect without any changes to parameters passed in. (@mygithubuser)
+```
+
+If it requires a [Breaking Change](#the-breaking-change) then it should also have a similar section detailing how it breaks environments and if it makes sense explain their upgrade path. For example:
+```
+### Security
+- we removed use of `some-gem` gem because it has been not been maintained. We are affected by the following security CVE https://some.hostname.for.a.cve.database.tld/SOME_PATH_TO_CVE (@mygithubuser)
+
+### Breaking Change
+- we removed the functionality of `bin/some-check.rb` because of security and maintainability concerns with `some-gem`. (@mygithubuser)
+```
+
+Explanation of upgrade path:
+```
+### Security
+- we removed use of `some-gem` gem because it has been not been maintained. We are affected by the following security CVE https://some.hostname.for.a.cve.database.tld/SOME_PATH_TO_CVE (@mygithubuser)
+
+### Breaking Change
+- we removed the functionality of `bin/some-check.rb` because of security and maintainability concerns with `some-gem`. While the options might be named differently in `bin/some-other-check.rb` it does have feature parity and is the go forward motion. (@mygithubuser)
 ```
