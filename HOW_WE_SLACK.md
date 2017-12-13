@@ -27,7 +27,28 @@ We have a somewhat unique approach to channels that we hope you enjoy. Here are 
 | **#contributing**   | Dedicated place to offer or discussion contribution to the Sensu project |
 | **#help**           | A breakout channel for detailed troubleshooting                          |
 
-We also break out into speciality channels. As an example, you might start a conversation in one of the project-focused channels, like `#plugins`, `#extensions` or `#core`, and then hop into `#help` to dive deeper. You might open a PR to fix a known issue and mention it in `#contributing`. You will also see channels for each major configuration management tool (like `#puppet`, `#chef`, and so on). Additional channels are welcome as needed.
+There's a pattern of Slack usage that says more channels is better. We don't subscribe to it 😛. We want to have as few channels as makes sense, where each on has a purpose and a maintainer. We also occasionally break out into speciality topics. Here are a few scenarios:
+
+* You start a conversation in one of the project-focused channels, like `#plugins`, `#extensions` or `#core`, and then hop into `#help` to dive deeper
+* You open a PR to fix a known issue and mention it in `#contributing`
+* You find a new topic of interest has an active following and a new plugin, so we create `#new-topic`
+
+You will also see channels for each major configuration management tool (like `#puppet`, `#chef`, and so on). Additional channels are welcome as needed.
+
+### Sidecar Channels
+
+If activity in one channel or its integrations (GitHub, Travis, etc) gets to be too high a volume, we can break it out into a separate place we call a **sidecar**.
+
+If the volume is lower than our threshold (5 messages per day averaged over a week), it should go into the primary channel. For example, GitHub activity on [Sensu Ansible Playbook](https://github.com/sensu/sensu-ansible) and [Ansible Plugin](https://github.com/sensu-plugins/sensu-plugins-ansible) is low, so it goes directly into the `#ansible` channel. Plugins, on the other hand, are very active and have a `#plugins-activity` sidecar.
+
+Naming is still up for debate, but here were some proposed naming conventions for any "sidecar" channels:
+
+    contribute-to-$THING (apply below variations here)
+    $THING-contributing
+    $THING-activity
+    $THING-github
+    $THING-feed
+    $THING-raw
 
 ## Administration
 
