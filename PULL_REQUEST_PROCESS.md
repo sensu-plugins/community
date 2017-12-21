@@ -238,7 +238,15 @@ Read up on [Rubocop Style Guide](https://github.com/bbatsov/ruby-style-guide#com
 
 ### Today
 
+#### Automated Tests
+
 Tests are very much lacking, please feel free to check [This github issue](https://github.com/sensu-plugins/community/issues/41) for how you can help us change this.
+
+The following blog posts talk about the testing philosophy and how to actually write tests:
+- https://blog.sensuapp.org/our-approach-to-testing-sensu-plugins-869260eba94c
+- https://blog.sensuapp.org/writing-sensu-plugin-tests-with-test-kitchen-and-serverspec-b646d2eeee51
+
+#### Manual Testing
 
 If you are not willing to write an automated test then you should either in the PR stream add the redacted IO to the comment stream or description, if it is quite large please create a [gist](https://gist.github.com/) and link to it.
 
