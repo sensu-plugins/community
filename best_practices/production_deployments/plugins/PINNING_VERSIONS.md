@@ -49,6 +49,7 @@ sensu_plugin 'sensu-plugins-aws'
 ```
 sensu_plugin 'sensu-plugins-aws' do
   version '~> 10.0'
+end
 ```
 
 ### Pinning with Puppet
