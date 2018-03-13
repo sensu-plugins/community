@@ -179,7 +179,7 @@ If it requires a [Breaking Change](#the-breaking-change) then it should also hav
 ### Security
 - we removed use of `some-gem` gem because it has been not been maintained. We are affected by the following security CVE https://some.hostname.for.a.cve.database.tld/SOME_PATH_TO_CVE (@mygithubuser)
 
-### Breaking Change
+### Breaking Changes
 - we removed the functionality of `bin/some-check.rb` because of security and maintainability concerns with `some-gem`. (@mygithubuser)
 ```
 
@@ -188,6 +188,6 @@ Explanation of upgrade path:
 ### Security
 - we removed use of `some-gem` gem because it has been not been maintained. We are affected by the following security CVE https://some.hostname.for.a.cve.database.tld/SOME_PATH_TO_CVE (@mygithubuser)
 
-### Breaking Change
+### Breaking Changes
 - we removed the functionality of `bin/some-check.rb` because of security and maintainability concerns with `some-gem`. While the options might be named differently in `bin/some-other-check.rb` it does have feature parity and is the go forward motion. (@mygithubuser)
 ```
