@@ -2,7 +2,7 @@
 
 ## How we version plugins
 
-Plugins follow [Semantic Versioning (semver)](https://semver.org/spec/v2.0.0.html), which requires breaking channels to be communicated through the release version number. Please see [this documentation](https://github.com/sensu-plugins/community/blob/master/HOW_WE_VERSION.md) for an in-depth look at how we do so.
+Plugins follow [Semantic Versioning (semver)](https://semver.org/spec/v2.0.0.html), which requires breaking changes to be communicated through the release version number. Please see [this documentation](https://github.com/sensu-plugins/community/blob/master/HOW_WE_VERSION.md) for an in-depth look at how we do so.
 
 ## No YOLOver
 
