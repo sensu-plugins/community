@@ -54,7 +54,7 @@ There is no a one size fits all but please no `YOLOver` for anything but local d
 
 #### Exact Versions
 
-If you are severely risk adverse or support life saving technologies this is the only way to actually make sure that you will not automatically bring in new changes which could potentially break you.
+If you are severely risk adverse or support life saving technologies this is the only way to ensure that you will not automatically bring in new changes which could potentially break you.
 
 This would look something like this in chef (principles are tech agnostic):
 ```
