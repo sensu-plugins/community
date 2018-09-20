@@ -10,6 +10,12 @@ In production, pinning of plugin versions is an absolute must do for stability o
 
 Chances are you don't realize you are following this pattern. What this really means is that at install time you are not providing any guidelines on the version to install which will pick up the latest version, even across major versions, which will pretty much always include some form of [breaking changes](https://github.com/sensu-plugins/community/blob/master/HOW_WE_CHANGELOG.md#the-breaking-change). **Keep reading on to verify you're not in this dangerous situation!**
 
+Pinning consists of two components:
+- during install specify the specific version you want to install or a set of constraints
+- a mechanism to ensure that they remain within the constraints specified
+
+If you are using the `CLI` or `sensu-install` methods you should probably use a config management solution or orchestration tool as a wrapper to ensure that it is consistently has that version installed.
+
 ## Pinning with various tools
 
 Please read through [this](https://github.com/sensu-plugins/community/blob/master/HOW_WE_VERSION.md#pinning-versions) to get a base understanding on the different types of version constraints.
