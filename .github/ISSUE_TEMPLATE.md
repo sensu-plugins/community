@@ -11,3 +11,7 @@ Repo to transfer:
 
 <!-- keep this next line if true -->
 I am also interested in continuing to help as a maintainer of this plugin 👍
+
+<!--
+Please keep this repository for cross repository discussions for bug reports, RFC, and feature requests. If they do not please open it against the specific repo.
+-->
