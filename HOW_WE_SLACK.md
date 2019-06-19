@@ -26,7 +26,7 @@ We have a somewhat unique approach to channels that we hope you enjoy. Here are 
 | **#announcements**  | A read-only channel for major updates from the leadership team           |
 | **#pull_requests**  | Dedicated place to see what PR's need attention and jump in to help      |
 | **#help**           | A breakout channel for detailed troubleshooting                          |
-| **#sensu2**         | Sensu 2.0 core developer team discussions                                |      
+| **#sensu-go**       | Sensu Go core developer team discussions                                 |      
 | **#core**           | Development of the Sensu framework by the core committers to the project |
 
 There's a pattern of Slack usage that says more channels is better. We don't subscribe to it 😛. We want to have as few channels as makes sense, where each on has a purpose and a maintainer. We also occasionally break out into speciality topics. Here are a few scenarios:
