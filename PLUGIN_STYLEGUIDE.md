@@ -40,11 +40,12 @@ Organize your plugin README according to this overall structure:
 * Usage examples
 * Configuration
   * Asset registration
-  * Asset configuration
+  * Asset definition
   * Resource definitions
 * Installation from source
-* Contributing
 * Additional notes
+* Contributing
+
 
 
 ## Overview
@@ -67,12 +68,12 @@ If the project is a collection (grouping of multiple plugins), the README should
 
 ## Usage examples
 
-A plugin’s usage is of primary concern when writing plugin documentation. The usage section should show the help output for a plugin, if available. Otherwise, any supported configuration via command-line arguments or environment variables should be thoroughly documented.
+Plugin documentation should include a usage section, which should show the help output for the plugin, if available. Otherwise, any supported configuration via command-line arguments or environment variables should be thoroughly documented in the usage section.
 
 
 ## Configuration
 
-The bulk of a plugin’s README is often in the configuration section, which includes asset registration, configuration information and resource definition examples.
+The bulk of a plugin’s README is often in the configuration section, which includes asset registration, asset definition, and resource definition examples.
 
 
 ### Asset registration
@@ -93,7 +94,7 @@ In general, avoid recommending building the plugin from source. Instead, use sen
 
 ### Asset definition
 
-Users can install asset definitions using sensuctl asset add, but we recommend including an example asset definition in your plugin README. Format your example in yaml.
+Users can install asset definitions using `sensuctl asset add`, but we recommend including an example asset definition in your plugin README. Format your example in yaml.
 
 
 ### Resource definitions
@@ -110,11 +111,11 @@ Assets are the preferred plugin installation method. If you cannot use an asset 
 
 ## Additional notes
 
-Use the **Additional notes** section to provide further context for users who will download and deploy your plugin. For example, you might explain whether your plugin requires an on-disk configuration file to properly operate (such as templates for notification plugins) or recommend the creation of RBAC roles which allow your plugin to make calls to the Sensu backend API. Make sure to describe any additional configuration needed to operate your plugin in this section.
+Use the **Additional notes** section to provide further context for users who will download and deploy your plugin. For example, you might explain whether your plugin requires an on-disk configuration file to properly operate (such as templates for notification plugins) or recommend that users create RBAC roles that allow your plugin to make calls to the Sensu backend API. Describe any additional configuration needed to operate your plugin in this section.
 
 ## Contributing
 
-We recommend that all community plugins include a **CONTRIBUTING **document in their repositories. If you create a plugin from the [Sensu Go Plugin](https://github.com/sensu/sensu-go-plugin) repository, a **CONTRIBUTING** document is included in the repository. If you create a plugin using a different method, you can add your own **CONTRIBUTING** document. Some examples from around the community can be found here:
+We recommend that all community plugins include a **CONTRIBUTING** document in their repositories. If you create a plugin from the [Sensu Go Plugin](https://github.com/sensu/sensu-go-plugin) repository, a CONTRIBUTING document is included in the repository. If you create a plugin using a different method, you can add your own CONTRIBUTING document. Examples of CONTRIBUTING documents from the community include:
 
 *   [Contributing to Sensu Go](https://github.com/sensu/sensu-go/blob/master/CONTRIBUTING.md)
 *   [Sensu Plugins Developer Guidelines](http://sensu-plugins.io/docs/developer_guidelines.html)
@@ -128,7 +129,7 @@ If your plugin is a collection, please document each plugin component so it’s 
 
 # Tables of contents
 
-The table of contents is a reader’s first impression of a plugin and should help them find the information they need. Each plugin’s README should include a table of contents that follows the structure mentioned above.
+The table of contents is a reader’s first impression of a plugin and should help them find the information they need. Each plugin’s README should include a table of contents that follows the structure described in this style guide.
 
 Here’s an example table of contents:
 
@@ -141,6 +142,6 @@ Here’s an example table of contents:
   - [Asset definition](#asset-definition)
   - [Resource definition](#resource-definition)
 - [Installation from source](#installation-from-source)
-- [Contributing](#contributing)
 - [Additional notes](#additional-notes)
+- [Contributing](#contributing)
 ```
