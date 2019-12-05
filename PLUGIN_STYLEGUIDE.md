@@ -45,6 +45,7 @@ Organize your plugin README according to this overall structure:
 * Installation from source
 * Additional notes
 * Contributing
+* Contributing
 
 
 
