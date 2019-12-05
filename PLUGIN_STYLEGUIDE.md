@@ -54,7 +54,6 @@ Organize your plugin README according to this overall structure:
 Begin with an overview of the plugin’s functionality. Describe what the plugin does and what it’s used for. Here are some examples of good overviews from Sensu plugins:
 
 
-
 *   [Prometheus Collector](https://github.com/sensu/sensu-prometheus-collector#overview)
 *   [Linux System Profiler](https://github.com/sensu/system-profile-linux#overview)
 *   [Influxdb Handler](https://github.com/sensu/sensu-influxdb-handler#sensu-influxdb-handler)
