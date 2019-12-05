@@ -66,7 +66,7 @@ Begin with an overview of the plugin’s functionality. Describe what the plugin
 If the project is a collection (grouping of multiple plugins), the README should include a list of executable plugin files. If the project is not a collection, you do not need to include a list of files.
 
 
-## Usage examples
+## Usage
 
 Plugin documentation should include a usage section, which should show the help output for the plugin, if available. Otherwise, any supported configuration via command-line arguments or environment variables should be thoroughly documented in the usage section.
 
