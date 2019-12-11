@@ -121,9 +121,9 @@ We recommend that all community plugins include a **CONTRIBUTING** document in t
 
 # Plugin collections
 
-We recommend adopting the [Unix Philosophy](https://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html): write a plugin that does one thing well, and avoid collections of plugins. Collections may simplify deployment, but they complicate documenting your plugin’s functionality. 
+Plugin collections can be useful, as they bundle functionality into a single asset. However, we ask that if you write a collection that you document each executable's functionality. A prime example of a plugin collection with well-documented executables can be found here:
 
-If your plugin is a collection, please document each plugin component so it’s clear what each does. 
+* [NCR nagios-foundation collection](https://github.com/ncr-devops-platform/nagiosfoundation)
 
 # Tables of contents
 
