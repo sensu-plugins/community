@@ -81,6 +81,8 @@ Maintainers do their best to cover the diverse set of plugins and adjacent techn
 
 If you're working on building your own plugins, use [the skeleton plugin](https://github.com/sensu-plugins/sensu-plugins-skel) to get started!
 
+If you're writing or updating a plugin's README, review the Sensu Community [plugin README style guide](https://github.com/sensu-plugins/community/blob/master/PLUGIN_STYLEGUIDE.md) for content suggestions and guidance.
+
 
 [1]: https://github.com/sensu-plugins/sensu-plugins-feature-requests/issues/23
 [2]: https://github.com/sensu-plugins/sensu-plugins-feature-requests/issues/17
